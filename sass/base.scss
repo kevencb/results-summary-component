@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Variables */
+$lightRed: hsl(0, 100%, 67%);
+$orangeyYellow: hsl(39, 100%, 56%);
+$greenTeal: hsl(166, 100%, 37%);
+$cobaltBlue: hsl(234, 85%, 45%);
+
+/* Gradiants */
+$lightSlateBlue: hsl(252, 100%, 67%);
+$lightRoyalBlue: hsl(241, 81%, 54%);
+$violetBlue: hsla(256, 72%, 46%, 1);
+$persianBlue: hsla(241, 72%, 46%, 0);
+
+$gradient_01: linear-gradient($lightSlateBlue, $lightRoyalBlue);
+$gradient_02: linear-gradient($lightRoyalBlue, transparent);
+
+/* Neutral */
+$white: hsl(0, 0%, 100%);
+$paleBlue: hsl(221, 100%, 96%);
+$labelightLavender: hsl(241, 100%, 89%);
+$darkGrayBlue: hsl(224, 30%, 27%);
+
+@mixin gradient_02{
+    background-image: linear-gradient(#4D21C9, #4D21C9);
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin text($size: 1.6rem, $color: $white){
+    font-size: $size;
+    color: $color;
+}
+
+@mixin h1{
+    @include text(5.6rem, $white);
+    font-weight: 800;
+}
+
+@mixin h2{
+    @include text(2.4rem, $white);
+    font-weight: 700;
+}
+
+@mixin h3{
+    @include text(1.8rem, $labelightLavender);
+    font-weight: 600;
+}
+
+@mixin h4($color: $lightRed ){
+    @include text;
+    color: $color;
+}
+
+@mixin item($background: $lightRed){
+    width: 100%;
+    background-color: $background;
+    padding: 1.7rem 1.6rem 1.8rem;
+}
