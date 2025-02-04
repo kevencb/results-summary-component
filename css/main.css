@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
-/* Variables */
 /* Gradiants */
 /* Neutral */
+/* Variables */
+/* Background Items */
 * {
   padding: 0;
   margin: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -19,7 +20,6 @@ body {
 
 main {
   width: 100%;
-  height: 100vh;
 }
 main .card__score {
   background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
@@ -64,12 +64,76 @@ main .card__score p {
   color: hsl(241, 100%, 89%);
   font-weight: 500;
 }
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
+main .card__summary {
+  padding: 3rem;
+}
+main .card__summary h3 {
+  font-size: 1.8rem;
+  color: hsl(241, 100%, 89%);
+  font-weight: 600;
+  color: hsl(224, 30%, 27%);
+  margin-bottom: 2.4rem;
+}
+main .card__summary .card__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+main .card__summary .item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1.2rem;
+  font-size: 1.6rem;
+  padding: 1.7rem 1.6rem 1.8rem;
+}
+main .card__summary .item h4 {
+  display: flex;
+  gap: 1.2rem;
+}
+main .card__summary .item p {
+  color: hsl(224, 30%, 27%);
+}
+main .card button {
+  width: 100%;
+  padding: 1.6rem;
+  display: block;
+  background-color: hsl(224, 30%, 27%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 10rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 0.8rem;
 }
 
-.attribution a {
-  color: hsl(228, 45%, 44%);
+.itemReaction {
+  background-color: rgba(255, 87, 87, 0.07);
+  color: hsl(0, 100%, 67%);
+}
+
+.itemMemory {
+  background-color: rgba(255, 176, 31, 0.07);
+  color: hsl(39, 100%, 56%);
+}
+
+.itemVerbal {
+  background-color: rgba(0, 189, 145, 0.07);
+  color: hsl(166, 100%, 37%);
+}
+
+.itemVisual {
+  background-color: rgba(17, 37, 212, 0.07);
+  color: hsl(234, 85%, 45%);
+}
+
+footer {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+footer a {
+  color: hsl(256, 72%, 46%);
+  font-weight: 700;
 }/*# sourceMappingURL=main.css.map */

@@ -1,17 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Variables */
-$lightRed: hsl(0, 100%, 67%);
-$orangeyYellow: hsl(39, 100%, 56%);
-$greenTeal: hsl(166, 100%, 37%);
-$cobaltBlue: hsl(234, 85%, 45%);
 
 /* Gradiants */
 $lightSlateBlue: hsl(252, 100%, 67%);
 $lightRoyalBlue: hsl(241, 81%, 54%);
 $violetBlue: hsla(256, 72%, 46%, 1);
 $persianBlue: hsla(241, 72%, 46%, 0);
-
 $gradient_01: linear-gradient($lightSlateBlue, $lightRoyalBlue);
 $gradient_02: linear-gradient($lightRoyalBlue, transparent);
 
@@ -20,6 +14,8 @@ $white: hsl(0, 0%, 100%);
 $paleBlue: hsl(221, 100%, 96%);
 $labelightLavender: hsl(241, 100%, 89%);
 $darkGrayBlue: hsl(224, 30%, 27%);
+
+
 
 @mixin gradient_02{
     background-image: linear-gradient(#4D21C9, #4D21C9);
@@ -53,8 +49,47 @@ $darkGrayBlue: hsl(224, 30%, 27%);
     color: $color;
 }
 
-@mixin item($background: $lightRed){
+@mixin item{
     width: 100%;
-    background-color: $background;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1.2rem;
+    font-size: 1.6rem;
     padding: 1.7rem 1.6rem 1.8rem;
 }
+
+@mixin itemDiv($background: $white, $color: $lightSlateBlue){
+    background-color: $background;
+    color: $color;
+}
+
+@mixin itemReaction{
+    @include itemDiv($background: $reaction, $color: $lightRed );
+}
+
+@mixin itemMemory{
+    @include itemDiv($background: $memory, $color: $orangeyYellow );
+}
+
+@mixin itemVerbal{
+    @include itemDiv($background: $verbal, $color: $greenTeal );
+}
+
+@mixin itemVisual{
+    @include itemDiv($background: $visual, $color: $cobaltBlue );
+}
+
+
+/* Variables */
+$lightRed: hsl(0, 100%, 67%);
+$orangeyYellow: hsl(39, 100%, 56%);
+$greenTeal: hsl(166, 100%, 37%);
+$cobaltBlue: hsl(234, 85%, 45%);
+
+
+/* Background Items */
+$reaction: rgba($color: $lightRed, $alpha: .07);
+$memory: rgba($color: $orangeyYellow, $alpha: .07);
+$verbal: rgba($color: $greenTeal, $alpha: .07);
+$visual: rgba($color: $cobaltBlue, $alpha: .07);
