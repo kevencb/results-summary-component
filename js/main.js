@@ -14,7 +14,7 @@ async function loadItems(){
 function displayItems(items){
     const itemList = document.querySelector('.card__container');
     itemsOrder = items.reverse()
-    itemsOrder.forEach( (item, index) => {
+    itemsOrder.forEach( item => {
       const itemDiv = document.createElement('div');
       itemDiv.classList.add('item')
       itemDiv.innerHTML = `
@@ -35,10 +35,7 @@ function displayItems(items){
             itemDiv.classList.add('itemVisual')
             break
       }
-          // Animación con retardo para simular orden descendente
-    setTimeout(() => {
-        itemList.appendChild(itemDiv);
-      }, (items.length - index - 1) * 0); //
+      itemList.prepend(itemDiv)
     })
 }
 loadItems()

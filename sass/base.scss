@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 /* Gradiants */
 $lightSlateBlue: hsl(252, 100%, 67%);
 $lightRoyalBlue: hsl(241, 81%, 54%);
@@ -15,7 +14,18 @@ $paleBlue: hsl(221, 100%, 96%);
 $labelightLavender: hsl(241, 100%, 89%);
 $darkGrayBlue: hsl(224, 30%, 27%);
 
+/* Variables */
+$lightRed: hsl(0, 100%, 67%);
+$orangeyYellow: hsl(39, 100%, 56%);
+$greenTeal: hsl(166, 100%, 37%);
+$cobaltBlue: hsl(234, 85%, 45%);
 
+
+/* Background Items */
+$reaction: rgba($color: $lightRed, $alpha: .07);
+$memory: rgba($color: $orangeyYellow, $alpha: .07);
+$verbal: rgba($color: $greenTeal, $alpha: .07);
+$visual: rgba($color: $cobaltBlue, $alpha: .07);
 
 @mixin gradient_02{
     background-image: linear-gradient(#4D21C9, #4D21C9);
@@ -27,21 +37,37 @@ $darkGrayBlue: hsl(224, 30%, 27%);
 @mixin text($size: 1.6rem, $color: $white){
     font-size: $size;
     color: $color;
+    // margin-bottom: 1.4rem;
 }
 
 @mixin h1{
     @include text(5.6rem, $white);
     font-weight: 800;
+    margin-bottom: 0;
+    @media (width >= 768px) {
+        @include text(7.2rem, $white);
+        line-height: 7.2rem;
+        margin-bottom: .4rem;
+        padding-bottom: 0;
+    }
 }
 
 @mixin h2{
     @include text(2.4rem, $white);
     font-weight: 700;
+    margin-bottom: .8rem;
+    @media (width >= 768px){
+        font-size: 3.2rem;
+        margin-bottom: 1.4rem;
+    }
 }
 
 @mixin h3{
     @include text(1.8rem, $labelightLavender);
     font-weight: 600;
+    @media (width >= 768px){
+        font-size: 2.4rem;
+    }
 }
 
 @mixin h4($color: $lightRed ){
@@ -57,6 +83,59 @@ $darkGrayBlue: hsl(224, 30%, 27%);
     border-radius: 1.2rem;
     font-size: 1.6rem;
     padding: 1.7rem 1.6rem 1.8rem;
+    @media (width >= 768px){
+        font-size: 1.8rem;
+    }
+}
+
+@mixin card-score{
+    background-image: $gradient_01;
+    padding: 2.4rem 5.8rem 3.4rem;
+    text-align: center;
+    color: $labelightLavender;
+    border-radius: 0 0 3.2rem 3.2rem;
+    @media (width >= 768px){
+        border-radius: 3.2rem;
+        padding: 3.8rem 5.4rem;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        background-color: aqua;
+    }
+}
+
+@mixin score{
+    width: 14rem;
+    height: 14rem;
+    border-radius: 100rem;
+    margin: 2.4rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: $gradient_02;
+    @media (width >= 768px) {
+        width: 20rem;
+        height: 20rem;
+        margin: 3.5rem auto 2.8rem;
+    }
+}
+
+@mixin button{
+    width: 100%;
+    padding: 1.6rem;
+    display: block;
+    background-color: $darkGrayBlue;
+    color: $white;
+    border: none;
+    border-radius: 10rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 2.4rem;
+    cursor: pointer;
+    @media (width >= 768px){
+        margin-top: 4rem;
+    }
 }
 
 @mixin itemDiv($background: $white, $color: $lightSlateBlue){
@@ -79,17 +158,3 @@ $darkGrayBlue: hsl(224, 30%, 27%);
 @mixin itemVisual{
     @include itemDiv($background: $visual, $color: $cobaltBlue );
 }
-
-
-/* Variables */
-$lightRed: hsl(0, 100%, 67%);
-$orangeyYellow: hsl(39, 100%, 56%);
-$greenTeal: hsl(166, 100%, 37%);
-$cobaltBlue: hsl(234, 85%, 45%);
-
-
-/* Background Items */
-$reaction: rgba($color: $lightRed, $alpha: .07);
-$memory: rgba($color: $orangeyYellow, $alpha: .07);
-$verbal: rgba($color: $greenTeal, $alpha: .07);
-$visual: rgba($color: $cobaltBlue, $alpha: .07);

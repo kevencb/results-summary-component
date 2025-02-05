@@ -14,12 +14,52 @@ html {
 }
 
 body {
-  background-color: hsl(221, 100%, 96%);
+  background-color: hsl(0, 0%, 100%);
   font-family: "Hanken Grotesk";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  gap: 2.4rem;
+}
+@media (width >= 768px) {
+  body {
+    background-color: hsl(221, 100%, 96%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 5.6rem;
+  }
 }
 
 main {
   width: 100%;
+  max-width: 73.6rem;
+  display: grid;
+  grid-template-rows: 1fr max-content;
+  background-color: aqua;
+  overflow: hidden;
+}
+@media (width >= 768px) {
+  main {
+    display: grid;
+    align-content: center;
+    margin: 0 auto;
+    border-radius: 3.2rem;
+    box-shadow: 0 3rem 6rem rgba(120, 87, 255, 0.1);
+  }
+}
+main .card {
+  background-color: hsl(0, 0%, 100%);
+}
+@media (width >= 768px) {
+  main .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 main .card__score {
   background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
@@ -28,14 +68,29 @@ main .card__score {
   color: hsl(241, 100%, 89%);
   border-radius: 0 0 3.2rem 3.2rem;
 }
+@media (width >= 768px) {
+  main .card__score {
+    border-radius: 3.2rem;
+    padding: 3.8rem 5.4rem;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    background-color: aqua;
+  }
+}
 main .card__score .pre-title {
   font-size: 1.8rem;
   color: hsl(241, 100%, 89%);
   font-weight: 600;
 }
+@media (width >= 768px) {
+  main .card__score .pre-title {
+    font-size: 2.4rem;
+  }
+}
 main .card__score .score {
-  width: 140px;
-  height: 140px;
+  width: 14rem;
+  height: 14rem;
   border-radius: 100rem;
   margin: 2.4rem auto;
   display: flex;
@@ -44,28 +99,65 @@ main .card__score .score {
   justify-content: center;
   background-image: linear-gradient(hsl(241, 81%, 54%), transparent);
 }
+@media (width >= 768px) {
+  main .card__score .score {
+    width: 20rem;
+    height: 20rem;
+    margin: 3.5rem auto 2.8rem;
+  }
+}
 main .card__score .score h1 {
   font-size: 5.6rem;
   color: hsl(0, 0%, 100%);
   font-weight: 800;
+  margin-bottom: 0;
+}
+@media (width >= 768px) {
+  main .card__score .score h1 {
+    font-size: 7.2rem;
+    color: hsl(0, 0%, 100%);
+    line-height: 7.2rem;
+    margin-bottom: 0.4rem;
+    padding-bottom: 0;
+  }
 }
 main .card__score .score span {
   font-size: 1.6rem;
   color: hsl(241, 100%, 89%);
+}
+@media (width >= 768px) {
+  main .card__score .score span {
+    font-size: 1.8rem;
+  }
 }
 main .card__score h2 {
   font-size: 2.4rem;
   color: hsl(0, 0%, 100%);
   font-weight: 700;
   margin-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+@media (width >= 768px) {
+  main .card__score h2 {
+    font-size: 3.2rem;
+    margin-bottom: 1.4rem;
+  }
 }
 main .card__score p {
   font-size: 1.8rem;
   color: hsl(241, 100%, 89%);
   font-weight: 500;
+  display: block;
+  margin-bottom: 0;
 }
 main .card__summary {
   padding: 3rem;
+}
+@media (width >= 768px) {
+  main .card__summary {
+    background-color: hsl(0, 0%, 100%);
+    padding: 3.8rem 4rem 4.6rem;
+  }
 }
 main .card__summary h3 {
   font-size: 1.8rem;
@@ -73,6 +165,11 @@ main .card__summary h3 {
   font-weight: 600;
   color: hsl(224, 30%, 27%);
   margin-bottom: 2.4rem;
+}
+@media (width >= 768px) {
+  main .card__summary h3 {
+    font-size: 2.4rem;
+  }
 }
 main .card__summary .card__container {
   display: flex;
@@ -87,6 +184,11 @@ main .card__summary .item {
   border-radius: 1.2rem;
   font-size: 1.6rem;
   padding: 1.7rem 1.6rem 1.8rem;
+}
+@media (width >= 768px) {
+  main .card__summary .item {
+    font-size: 1.8rem;
+  }
 }
 main .card__summary .item h4 {
   display: flex;
@@ -105,7 +207,16 @@ main .card button {
   border-radius: 10rem;
   font-size: 1.8rem;
   font-weight: 700;
-  margin-top: 0.8rem;
+  margin-top: 2.4rem;
+  cursor: pointer;
+}
+@media (width >= 768px) {
+  main .card button {
+    margin-top: 4rem;
+  }
+}
+main .card button:hover {
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }
 
 .itemReaction {
@@ -131,7 +242,7 @@ main .card button {
 footer {
   font-size: 11px;
   text-align: center;
-  margin-bottom: 2.4rem;
+  margin-bottom: 3.2rem;
 }
 footer a {
   color: hsl(256, 72%, 46%);
