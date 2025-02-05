@@ -2,7 +2,7 @@ const containerItem = document.querySelector(".card__container")
 
 async function loadItems(){
     try {
-        const resp = await fetch('../data.json');
+        const resp = await fetch('https://raw.githubusercontent.com/kevencb/results-summary-component/refs/heads/main/data.json');
         const items = await resp.json();
         displayItems(items)
         console.log(items)
