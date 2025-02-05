@@ -13,6 +13,26 @@ html {
   font-size: 10px;
 }
 
+.itemReaction {
+  background-color: rgba(255, 87, 87, 0.07);
+  color: hsl(0, 100%, 67%);
+}
+
+.itemMemory {
+  background-color: rgba(255, 176, 31, 0.07);
+  color: hsl(39, 100%, 56%);
+}
+
+.itemVerbal {
+  background-color: rgba(0, 189, 145, 0.07);
+  color: hsl(166, 100%, 37%);
+}
+
+.itemVisual {
+  background-color: rgba(17, 37, 212, 0.07);
+  color: hsl(234, 85%, 45%);
+}
+
 body {
   background-color: hsl(0, 0%, 100%);
   font-family: "Hanken Grotesk";
@@ -20,7 +40,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 100vh;
   gap: 2.4rem;
 }
 @media (width >= 768px) {
@@ -219,30 +238,10 @@ main .card button:hover {
   background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }
 
-.itemReaction {
-  background-color: rgba(255, 87, 87, 0.07);
-  color: hsl(0, 100%, 67%);
-}
-
-.itemMemory {
-  background-color: rgba(255, 176, 31, 0.07);
-  color: hsl(39, 100%, 56%);
-}
-
-.itemVerbal {
-  background-color: rgba(0, 189, 145, 0.07);
-  color: hsl(166, 100%, 37%);
-}
-
-.itemVisual {
-  background-color: rgba(17, 37, 212, 0.07);
-  color: hsl(234, 85%, 45%);
-}
-
 footer {
   font-size: 11px;
   text-align: center;
-  margin-bottom: 3.2rem;
+  margin-bottom: 4rem;
 }
 footer a {
   color: hsl(256, 72%, 46%);

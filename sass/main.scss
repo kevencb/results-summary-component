@@ -10,6 +10,23 @@ html{
     font-size: 10px;
 }
 
+.itemReaction{
+    @include itemReaction;
+}
+
+.itemMemory{
+    @include itemMemory;
+}
+
+.itemVerbal{
+    @include itemVerbal;
+}
+
+.itemVisual{
+    @include itemVisual;
+}
+
+
 body{
     background-color: $white;
     font-family: 'Hanken Grotesk';
@@ -17,7 +34,6 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 100vh;
     gap: 2.4rem;
     @media (width >= 768px) {
         background-color: $paleBlue;
@@ -116,28 +132,13 @@ main{
     }
 }
 
-.itemReaction{
-    @include itemReaction;
-}
-
-.itemMemory{
-    @include itemMemory;
-}
-
-.itemVerbal{
-    @include itemVerbal;
-}
-
-.itemVisual{
-    @include itemVisual;
-}
-
 footer {
     font-size: 11px; 
     text-align: center;
-    margin-bottom: 3.2rem;
+    margin-bottom: 4rem;
     a { 
         color: $violetBlue;
         font-weight: 700;
     }
 }
+
